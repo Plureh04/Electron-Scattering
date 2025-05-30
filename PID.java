@@ -1,3 +1,5 @@
+// Data is filtered to include only events with both an electron and a proton.
+
 import org.jlab.groot.fitter.ParallelSliceFitter;
 import org.jlab.groot.math.F1D;
 import org.jlab.jnp.hipo4.io.*;
@@ -25,7 +27,7 @@ public class PID {
         Bank particles = new Bank(reader.getSchemaFactory().getSchema("REC::Particle"));
 
         // Histogram for Beta vs Momentum
-        H2F BvM = new H2F("hBetaVsPTot", 100, 0.0, 6.0, 100, 0.1, 1.05);
+        H2F BvM = new H2F("hBetaVsPTot", 100, 0.3, 6.0, 100, 0.1, 1.05);
         BvM.setTitleX("P [GeV]");
         BvM.setTitleY("#beta");
 
@@ -153,5 +155,23 @@ public class PID {
 
         System.out.println("Total Events Processed: " + eventCount);
         System.out.println("Events with Electron and Proton: " + protonCount);
+        System.out.println("Total Protons in DeltaBeta vs Momentum: " + DBvM.getEntries());
+
+        // Counting protons 1 standard deviation away from the mean
+        int countProtons = 0;
+        for (int ix = 0; ix < DBvM.getXAxis().getNBins(); ix++) {
+            double mean = meanVsMomentum.getDataY(ix);
+            double stdDev = widthVsMomentum.getDataY(ix);
+            for (int iy = 0; iy < DBvM.getYAxis().getNBins(); iy++) {
+                double deltaBeta = DBvM.getYAxis().getBinCenter(iy);
+                // To change from 1 std devation to another standard deviation, change the condition below (2 * stdDev)
+                if (Math.abs(deltaBeta - mean) <= stdDev) {
+                    countProtons += (int) DBvM.getBinContent(ix, iy);
+                }
+            }
+        }
+        System.out.println("Count of Protons within 1 Standard Deviation: " + countProtons);
+        //System.out.println("Count of Protons within 2 Standard Deviations: " + countProtons);
+
     }
 }
