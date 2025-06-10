@@ -242,6 +242,8 @@ public class Kinematics extends PID {
         kinCanvas.cd(2).draw(hNu);
         kinCanvas.cd(3).draw(hY);
         kinCanvas.cd(4).draw(hQ2vW);
+        // Save the kinematics canvas to a file
+        kinCanvas.save("/home/reh1/Pictures/DIS_Kinematics.png");
 
         // Canvas for electron variables
         TCanvas eCanvas = new TCanvas("Electron Variables", 1200, 800);
@@ -251,6 +253,8 @@ public class Kinematics extends PID {
         eCanvas.cd(2).draw(hElectronPhi);
         eCanvas.cd(3).draw(hElectronTheta);
         eCanvas.cd(4).draw(hElectronVz);
+        // Save canvases to files
+        eCanvas.save("/home/reh1/Pictures/DIS_Electron_Variables.png");
 
         // Canvas for proton variables
         TCanvas pCanvas = new TCanvas("Proton Variables", 1200, 800);
@@ -260,7 +264,8 @@ public class Kinematics extends PID {
         pCanvas.cd(2).draw(hProtonPhi);
         pCanvas.cd(3).draw(hProtonTheta);
         pCanvas.cd(4).draw(hProtonVz);
-
+        // Save canvases to files
+        pCanvas.save("/home/reh1/Pictures/DIS_Proton_Variables.png");
         // Print completion message
         System.out.println("Done processing events.");
     }
