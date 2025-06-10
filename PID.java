@@ -32,7 +32,7 @@ public class PID {
         BvM.setTitleY("#beta");
 
         // 2D histogram: DeltaBeta vs Momentum for protons
-        H2F DBvM = new H2F("DBvM", 25, 0.60, 3.0, 100, -0.033, 0.033);
+        H2F DBvM = new H2F("DBvM", 25, 0.60, 3.0, 100, -0.012, 0.012);
         DBvM.setTitleX("P [GeV]");
         DBvM.setTitleY("D#beta");
 
@@ -181,7 +181,7 @@ public class PID {
                 // Get the center value of the deltaBeta bin
                 double deltaBeta = DBvM.getYAxis().getBinCenter(iy);
                 // Check if this deltaBeta is within 1 sigma of the mean for this momentum bin
-                // (You can change the multiplier for a wider window, e.g., 2 * stdDev for 2 sigma)
+                // (can change the multiplier for a wider window, e.g., 2 * stdDev for 2 sigma)
                 if (Math.abs(deltaBeta - mean) <= stdDev) {
                     // Add the number of protons in this bin to the total count
                     countProtons += (int) DBvM.getBinContent(ix, iy);
