@@ -5,7 +5,7 @@ import org.jlab.jnp.hipo4.data.*;
 import org.jlab.groot.data.*;
 import org.jlab.clas.physics.*;
 
-public class Testing extends ... {
+public class MoreTesting extends Testing {
     public static void main(String[] args) {
         // Create a HipoChain to read multiple HIPO files (CLAS12 data format)
         HipoChain reader = new HipoChain();
