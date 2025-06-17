@@ -59,13 +59,13 @@ public class Kinematics {
         // 2d Histogram for Bjorken X
         H2F hXvQ2 = new H2F("hXvQ2", 100, 0.0, 1.0, 100, 0.5, 6.0);
         hXvQ2.setTitle("Bjorken X");
-        hXvQ2.setTitleX("Bjorken X");
+        hXvQ2.setTitleX("X");
         hXvQ2.setTitleY("Q^2 [GeV^2]");
 
         // 2d Histogram for Bjorken Z
         H2F hZvQ2 = new H2F("hZvQ2", 100, 0.0, 1.0, 100, 0.5, 6.0);
         hZvQ2.setTitle("Bjorken Z");
-        hZvQ2.setTitleX("Bjorken Z");
+        hZvQ2.setTitleX("Z");
         hZvQ2.setTitleY("Q^2 [GeV^2]");
 
         // Define Lorentz vectors for the beam, target, and electron
