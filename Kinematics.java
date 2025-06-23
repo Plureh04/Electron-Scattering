@@ -56,6 +56,7 @@ public class Kinematics {
         hY.setTitleY("Counts");
         hY.setFillColor(44);
 
+
         // 2d Histogram for Bjorken X
         H2F hXvQ2 = new H2F("hXvQ2", 100, 0.0, 1.0, 100, 0.5, 6.0);
         hXvQ2.setTitle("Bjorken X");
@@ -70,7 +71,7 @@ public class Kinematics {
 
         // Define Lorentz vectors for the beam, target, and electron
         // Beam: 10.6 GeV along z, Target: proton at rest
-        LorentzVector vBeam = new LorentzVector(0.0, 0.0, 10.6, 10.6);
+        LorentzVector vBeam = new LorentzVector(0.0, 0.0, 10.5473, 10.5473);
         LorentzVector vTarget = new LorentzVector(0.0, 0.0, 0.0, 0.938);
         LorentzVector electron = new LorentzVector();
         LorentzVector vW = new LorentzVector();
@@ -130,16 +131,16 @@ public class Kinematics {
         kinCanvas.cd(0).draw(hQ2);        // Draw Q^2
         kinCanvas.cd(1).draw(hW);         // Draw W
         kinCanvas.cd(2).draw(hNu);        // Draw nu
-        kinCanvas.cd(4).draw(hQ2vW);      // Draw Q^2 vs W
-        kinCanvas.cd(3).draw(hY);         // Draw y
-        kinCanvas.cd(5).draw(hXvQ2);      // Draw Bjorken X vs Q^2
+        kinCanvas.cd(3).draw(hQ2vW);      // Draw Q^2 vs W
+        kinCanvas.cd(4).draw(hXvQ2);      // Draw Bjorken X vs Q^2
+        kinCanvas.cd(5).draw(hY);      // Draw y vs Q^2
         kinCanvas.cd(6).draw(hZvQ2);      // Draw Bjorken Z vs Q^2
         kinCanvas.save("/home/reh1/Pictures/DIS_Kinematics.png"); // Save canvas as PNG
 
         System.out.println("Done processing DIS kinematics.");
 
-        long et = System.currentTimeMillis(); // End time for performance measurement
-        long time = et - st; // Calculate elapsed time
+        long et = System.currentTimeMillis(); // End time
+        long time = et - st; // Calculate time
         System.out.println(" Time = " + (time / 1000.0) + " seconds"); // Print elapsed time
     }
 }
