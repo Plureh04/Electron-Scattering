@@ -1,0 +1,191 @@
+// Import required GROOT and CLAS12 libraries
+import org.jlab.groot.ui.TCanvas;
+import org.jlab.groot.data.*;
+import org.jlab.clas.physics.*;
+import org.jlab.jnp.hipo4.io.*;
+import org.jlab.jnp.hipo4.data.*;
+
+public class Electron_counts {
+    public static void main(String[] args) {
+        long st = System.currentTimeMillis(); // Start timer
+
+        // --- Set up HipoChain reader for Carbon files ---
+        HipoChain reader = Carbon_F.getCarbonChain();
+
+        // --- Event and particle banks ---
+        Event event = new Event();
+        Bank particles = new Bank(reader.getSchemaFactory().getSchema("REC::Particle"));
+
+        // --- Histograms for Carbon and Deuterium electrons ---
+        H1F hZ_C = new H1F("hZ_C", 100, 0, 2);      // z for Carbon
+        H1F hZ_D = new H1F("hZ_D", 100, 0, 2);      // z for Deuterium
+        H1F hQ2_C = new H1F("hQ2_C", 50, 0, 10);    // Q2 for Carbon
+        H1F hQ2_D = new H1F("hQ2_D", 50, 0, 10);    // Q2 for Deuterium
+        H1F hNu_C = new H1F("hNu_C", 50, 0, 10);    // nu for Carbon
+        H1F hNu_D = new H1F("hNu_D", 50, 0, 10);    // nu for Deuterium
+        H1F hPt2_C = new H1F("hPt2_C", 50, 0, 2);   // pt2 for Carbon
+        H1F hPt2_D = new H1F("hPt2_D", 50, 0, 2);   // pt2 for Deuterium
+
+        // --- Additional histograms: Counts vs Q2 and Counts vs Nu for both targets ---
+        H1F hCountsQ2_C = new H1F("hCountsQ2_C", 50, 0, 10);
+        H1F hCountsQ2_D = new H1F("hCountsQ2_D", 50, 0, 10);
+        H1F hCountsNu_C = new H1F("hCountsNu_C", 50, 0, 10);
+        H1F hCountsNu_D = new H1F("hCountsNu_D", 50, 0, 10);
+
+        // --- Lorentz vectors for beam and electron ---
+        LorentzVector vBeam = new LorentzVector(0.0, 0.0, 10.5473, 10.5473); // Beam 4-vector
+        LorentzVector electron = new LorentzVector(); // Electron 4-vector
+
+        int nElectrons_C = 0; // Counter for Carbon electrons
+        int nElectrons_D = 0; // Counter for Deuterium electrons
+
+        // --- Event loop: process all events in the Carbon chain ---
+        while (reader.hasNext()) {
+            reader.nextEvent(event);
+            event.read(particles);
+
+            int electronIndex = -1;
+            // Find the first electron in the event
+            for (int i = 0; i < particles.getRows(); i++) {
+                if (particles.getInt("pid", i) == 11) {
+                    electronIndex = i;
+                    break;
+                }
+            }
+            if (electronIndex == -1) continue; // Skip if no electron
+
+            // --- Electron kinematics ---
+            float e_px = particles.getFloat("px", electronIndex);
+            float e_py = particles.getFloat("py", electronIndex);
+            float e_pz = particles.getFloat("pz", electronIndex);
+            float e_vz = particles.getFloat("vz", electronIndex);
+            electron.setPxPyPzM(e_px, e_py, e_pz, 0.000511); // Set electron 4-vector
+
+            // --- Calculate Q2, nu, W, y ---
+            LorentzVector vVirtualPhoton = new LorentzVector();
+            vVirtualPhoton.copy(vBeam);
+            vVirtualPhoton.sub(electron);
+            double Q2 = -vVirtualPhoton.mass2();
+            double nu = vBeam.e() - electron.e();
+            double W2 = 0.938 * 0.938 + 2 * 0.938 * nu - Q2;
+            double W = Math.sqrt(W2);
+            double y = nu / vBeam.e();
+
+            // --- Apply DIS cuts: Q² > 1.0 GeV², W > 2 GeV, y < 0.85 ---
+            if (Q2 <= 1.0 || W <= 2.0 || y >= 0.85) continue;
+
+            double z = electron.e() / nu; // Energy fraction
+            double pt2 = e_px * e_px + e_py * e_py; // Transverse momentum squared
+
+            // --- Use vz cut to separate Carbon and Deuterium (adjust as needed) ---
+            if (e_vz > -8 && e_vz < -2) {
+                // Deuterium
+                nElectrons_D++;
+                hZ_D.fill(z);
+                hQ2_D.fill(Q2);
+                hNu_D.fill(nu);
+                hPt2_D.fill(pt2);
+                hCountsQ2_D.fill(Q2); // Fill counts vs Q2
+                hCountsNu_D.fill(nu); // Fill counts vs Nu
+            } else {
+                // Carbon (solid target)
+                nElectrons_C++;
+                hZ_C.fill(z);
+                hQ2_C.fill(Q2);
+                hNu_C.fill(nu);
+                hPt2_C.fill(pt2);
+                hCountsQ2_C.fill(Q2); // Fill counts vs Q2
+                hCountsNu_C.fill(nu); // Fill counts vs Nu
+            }
+        }
+
+        // --- Compute ratio histograms (Carbon/Deuterium) ---
+        H1F hRatioZ = hZ_C.histClone("hRatioZ");
+        hRatioZ.divide(hZ_D);
+        H1F hRatioQ2 = hQ2_C.histClone("hRatioQ2");
+        hRatioQ2.divide(hQ2_D);
+        H1F hRatioNu = hNu_C.histClone("hRatioNu");
+        hRatioNu.divide(hNu_D);
+        H1F hRatioPt2 = hPt2_C.histClone("hRatioPt2");
+        hRatioPt2.divide(hPt2_D);
+
+        // --- Convert to GraphErrors for plotting ratios ---
+        GraphErrors ratioGraphZ = hRatioZ.getGraph();
+        ratioGraphZ.setTitle("Carbon/Deuterium Electron Count Ratio vs z");
+        ratioGraphZ.setTitleX("Electron z");
+        ratioGraphZ.setTitleY("C/D Ratio");
+        ratioGraphZ.setMarkerStyle(2);
+        ratioGraphZ.setMarkerSize(8);
+
+        GraphErrors ratioGraphQ2 = hRatioQ2.getGraph();
+        ratioGraphQ2.setTitle("Carbon/Deuterium Electron Count Ratio vs Q^{2}");
+        ratioGraphQ2.setTitleX("Q^{2} [GeV^{2}]");
+        ratioGraphQ2.setTitleY("C/D Ratio");
+        ratioGraphQ2.setMarkerStyle(2);
+        ratioGraphQ2.setMarkerSize(8);
+
+        GraphErrors ratioGraphNu = hRatioNu.getGraph();
+        ratioGraphNu.setTitle("Carbon/Deuterium Electron Count Ratio vs Nu");
+        ratioGraphNu.setTitleX("Nu [GeV]");
+        ratioGraphNu.setTitleY("C/D Ratio");
+        ratioGraphNu.setMarkerStyle(2);
+        ratioGraphNu.setMarkerSize(8);
+
+        GraphErrors ratioGraphPt2 = hRatioPt2.getGraph();
+        ratioGraphPt2.setTitle("Carbon/Deuterium Electron Count Ratio vs Pt^{2}");
+        ratioGraphPt2.setTitleX("Pt^{2} [GeV^{2}]");
+        ratioGraphPt2.setTitleY("C/D Ratio");
+        ratioGraphPt2.setMarkerStyle(2);
+        ratioGraphPt2.setMarkerSize(8);
+
+        // --- Plot all ratio graphs ---
+        TCanvas cZ = new TCanvas("Ratio C/D vs z", 800, 600);
+        cZ.draw(ratioGraphZ, "AP");
+        cZ.getPad().getAxisY().setRange(0, 2);
+
+        TCanvas cQ2 = new TCanvas("Ratio C/D vs Q2", 800, 600);
+        cQ2.draw(ratioGraphQ2, "AP");
+        cQ2.getPad().getAxisY().setRange(0, 2);
+
+        TCanvas cNu = new TCanvas("Ratio C/D vs Nu", 800, 600);
+        cNu.draw(ratioGraphNu, "AP");
+        cNu.getPad().getAxisY().setRange(0, 2);
+
+        TCanvas cPt2 = new TCanvas("Ratio C/D vs Pt2", 800, 600);
+        cPt2.draw(ratioGraphPt2, "AP");
+        cPt2.getPad().getAxisY().setRange(0, 2);
+
+        // --- Plot and compare counts vs Q2 for both targets ---
+        TCanvas cCountsQ2 = new TCanvas("Counts vs Q2", 800, 600);
+        hCountsQ2_C.setLineColor(2); // Red for Carbon
+        hCountsQ2_D.setLineColor(4); // Blue for Deuterium
+        cCountsQ2.draw(hCountsQ2_C);
+        cCountsQ2.draw(hCountsQ2_D, "same");
+        // color fill
+        hCountsQ2_C.setFillColor(2);
+
+        // --- Plot and compare counts vs Nu for both targets ---
+        TCanvas cCountsNu = new TCanvas("Counts vs Nu", 800, 600);
+        hCountsNu_C.setLineColor(2); // Red for Carbon
+        hCountsNu_D.setLineColor(4); // Blue for Deuterium
+        cCountsNu.draw(hCountsNu_C);
+        cCountsNu.draw(hCountsNu_D, "same");
+        // color fill
+        hCountsNu_C.setFillColor(2);
+
+        // --- Save canvases as PNG images ---
+        cZ.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsZ_Ratio_C_D_DISCUT.png");
+        cQ2.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsQ2_Ratio_C_D_DISCUT.png");
+        cNu.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsNu_Ratio_C_D_DISCUT.png");
+        cPt2.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsPt2_Ratio_C_D_DISCUT.png");
+        cCountsQ2.save("/home/reh1/Pictures/Carbon/Electron_Count/Counts_vs_Q2.png");
+        cCountsNu.save("/home/reh1/Pictures/Carbon/Electron_Count/Counts_vs_Nu.png");
+
+        // --- Print electron counts for each target ---
+        System.out.println("Number of electrons from Deuterium: " + nElectrons_D);
+        System.out.println("Number of electrons from Carbon (solid): " + nElectrons_C);
+
+        System.out.println("Done processing C/D electron ratios and counts for z, Q2, Nu, and pt2.");
+        long et = System.currentTimeMillis(); // End timer
+    }
+}
