@@ -16,11 +16,7 @@ public class PID {
     public static void main(String[] args) {
 
         // Set up the HipoChain reader and add input files
-        HipoChain reader = new HipoChain();
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00040.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00041.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00042.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00043.hipo");
+        HipoChain reader = PB_Files.getPBChain();
         reader.open();
 
         Event event = new Event();
@@ -159,11 +155,13 @@ public class PID {
         // Draw and save mean vs momentum graph
         TCanvas meanCanvas = new TCanvas("Mean vs Momentum", 600, 600);
         meanCanvas.draw(meanVsMomentum);
+        meanCanvas.getPad().getAxisY().setRange(-0.0015, 0.0007); // Set Y-axis range for deltaBeta
         meanCanvas.save("/home/reh1/Pictures/Gaussian_Mean_vs_Momentum.png");
 
         // Draw and save width vs momentum graph
-        TCanvas widthCanvas = new TCanvas("Width vs Momentum", 600, 600);
+        TCanvas widthCanvas = new TCanvas("Width(Sigma) vs Momentum", 600, 600);
         widthCanvas.draw(widthVsMomentum);
+        widthCanvas.getPad().getAxisY().setRange(-0.025, 0.015); // Set Y-axis range for width
         widthCanvas.save("/home/reh1/Pictures/Gaussian_Width_vs_Momentum.png");
 
         // Print summary statistics
