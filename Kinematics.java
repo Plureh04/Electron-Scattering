@@ -8,13 +8,7 @@ import org.jlab.clas.physics.*;
 public class Kinematics {
     public static void main(String[] args) {
         long st = System.currentTimeMillis(); // Start time for performance measurement
-        // Create a HipoChain reader and add HIPO files to process
-        HipoChain reader = new HipoChain();
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00040.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00041.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00042.hipo");
-        reader.addFile("/home/reh1/Downloads/rec_clas_020508.evio.00043.hipo");
-        reader.open();
+        HipoChain reader = PB_Files.getPBChain();
 
         // Create an Event object to hold each event and a Bank for particle data
         Event event = new Event();
@@ -56,7 +50,6 @@ public class Kinematics {
         hY.setTitleY("Counts");
         hY.setFillColor(44);
 
-
         // 2d Histogram for Bjorken X
         H2F hXvQ2 = new H2F("hXvQ2", 100, 0.0, 1.0, 100, 0.5, 6.0);
         hXvQ2.setTitle("Bjorken X");
@@ -81,6 +74,18 @@ public class Kinematics {
         while (reader.hasNext()) {
             reader.nextEvent(event);      // Read next event
             event.read(particles);        // Read particle bank for this event
+
+            // Check if the event contains at least one electron and at least one proton
+            boolean hasElectron = false;
+            boolean hasProton = false;
+            for (int i = 0; i < particles.getRows(); i++) {
+                int pid = particles.getInt("pid", i);
+                if (pid == 11) hasElectron = true;
+                if (pid == 2212) hasProton = true;
+            }
+
+            // Only process events with both an electron and a proton
+            if (!(hasElectron && hasProton)) continue;
 
             // Loop over all particles in the event
             for (int i = 0; i < particles.getRows(); i++) {
@@ -133,9 +138,9 @@ public class Kinematics {
         kinCanvas.cd(2).draw(hNu);        // Draw nu
         kinCanvas.cd(3).draw(hQ2vW);      // Draw Q^2 vs W
         kinCanvas.cd(4).draw(hXvQ2);      // Draw Bjorken X vs Q^2
-        kinCanvas.cd(5).draw(hY);      // Draw y vs Q^2
+        kinCanvas.cd(5).draw(hY);         // Draw y vs Q^2
         kinCanvas.cd(6).draw(hZvQ2);      // Draw Bjorken Z vs Q^2
-        kinCanvas.save("/home/reh1/Pictures/DIS_Kinematics.png"); // Save canvas as PNG
+        kinCanvas.save("/home/reh1/Pictures/PB/DIS_Kinematics.png"); // Save canvas as PNG
 
         System.out.println("Done processing DIS kinematics.");
 
