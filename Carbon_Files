@@ -1,0 +1,289 @@
+// src/Files_carbon.java
+import org.jlab.jnp.hipo4.io.HipoChain;
+
+public class Files_carbon {
+    public static HipoChain getCarbonChain() {
+        HipoChain reader = new HipoChain();
+        // Carbon (C)
+        // 020131
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020131/rec_clas_020131.evio.00049.hipo");
+
+        // 020132
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020132/rec_clas_020132.evio.00049.hipo");
+        // 020133
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020133/rec_clas_020133.evio.00049.hipo");
+        // 020134
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020134/rec_clas_020134.evio.00049.hipo");
+        // 020135
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020135/rec_clas_020135.evio.00049.hipo");
+        // 020136
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020136/rec_clas_020136.evio.00049.hipo");
+        // 020137
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020137/rec_clas_020137.evio.00049.hipo");
+        // 020138
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020138/rec_clas_020138.evio.00049.hipo");
+        // 020139
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020139/rec_clas_020139.evio.00049.hipo");
+        // 020140
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020140/rec_clas_020140.evio.00049.hipo");
+        // 020141
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020141/rec_clas_020141.evio.00049.hipo");
+        // 020142
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020142/rec_clas_020142.evio.00049.hipo");
+        // 020143
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020143/rec_clas_020143.evio.00049.hipo");
+        // 020144
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020144/rec_clas_020144.evio.00049.hipo");
+        // 020145
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020145/rec_clas_020145.evio.00049.hipo");
+        // 020148
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020148/rec_clas_020148.evio.00049.hipo");
+        // 020149
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020149/rec_clas_020149.evio.00049.hipo");
+        // 020150
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020150/rec_clas_020150.evio.00049.hipo");
+        // 020151
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020151/rec_clas_020151.evio.00049.hipo");
+        // 020152
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020152/rec_clas_020152.evio.00049.hipo");
+        // 020153
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020153/rec_clas_020153.evio.00049.hipo");
+        // 020154
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020154/rec_clas_020154.evio.00049.hipo");
+        // 020155
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020155/rec_clas_020155.evio.00049.hipo");
+        // 020156
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00048.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020156/rec_clas_020156.evio.00049.hipo");
+        // 020157
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00040.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00041.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00042.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00043.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00044.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00045.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00046.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00047.hipo");
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00048.hipo");
+
+        reader.addFile("/nfs/data02/clas12/rg-e/production/pass0.7/mon/recon/020157/rec_clas_020157.evio.00049.hipo");
+
+        reader.open();
+        return reader;
+    }
+}
