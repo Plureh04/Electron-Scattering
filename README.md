@@ -1,3 +1,3 @@
 # Summer2025
 
-Still working through the project, updated as i go.
+In order to run this code, you will need nfs data
