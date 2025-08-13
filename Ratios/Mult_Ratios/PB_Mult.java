@@ -168,7 +168,7 @@ public class Ratio_lead {
         hMultRatioQ2.setTitleX("Q^{2} [GeV^{2}]");
         hMultRatioQ2.setTitleY("Pb/D Ratio");
         cMultQ2.draw(hMultRatioQ2);
-        cMultQ2.save("/home/reh1/Pictures/PB/MultRatios/MultiplicityRatio_Q2.png");
+        cMultQ2.save("/home/youruserdirectory/Pictures/PB/MultRatios/MultiplicityRatio_Q2.png");
 
         TCanvas cMultNu = new TCanvas("Multiplicity Ratio Nu", 800, 600);
         hMultRatioNu.setFillColor(2);
@@ -176,7 +176,7 @@ public class Ratio_lead {
         hMultRatioNu.setTitleX("Nu [GeV]");
         hMultRatioNu.setTitleY("Pb/D Ratio");
         cMultNu.draw(hMultRatioNu);
-        cMultNu.save("/home/reh1/Pictures/PB/MultRatios/MultiplicityRatio_Nu.png");
+        cMultNu.save("/home/youruserdirectory/Pictures/PB/MultRatios/MultiplicityRatio_Nu.png");
 
         TCanvas cMultZh = new TCanvas("Multiplicity Ratio Zh", 800, 600);
         hMultRatioZh.setFillColor(3);
@@ -184,7 +184,7 @@ public class Ratio_lead {
         hMultRatioZh.setTitleX("Z_{h}");
         hMultRatioZh.setTitleY("Pb/D Ratio");
         cMultZh.draw(hMultRatioZh);
-        cMultZh.save("/home/reh1/Pictures/PB/MultRatios/MultiplicityRatio_Zh.png");
+        cMultZh.save("/home/youruserdirectory/Pictures/PB/MultRatios/MultiplicityRatio_Zh.png");
 
         TCanvas cMultPt2 = new TCanvas("Multiplicity Ratio Pt2", 800, 600);
         hMultRatioPt2.setFillColor(5);
@@ -192,7 +192,7 @@ public class Ratio_lead {
         hMultRatioPt2.setTitleX("P_{t}^{2} [GeV^{2}]");
         hMultRatioPt2.setTitleY("Pb/D Ratio");
         cMultPt2.draw(hMultRatioPt2);
-        cMultPt2.save("/home/reh1/Pictures/PB/MultRatios/MultiplicityRatio_Pt2.png");
+        cMultPt2.save("/home/youruserdirectory/Pictures/PB/MultRatios/MultiplicityRatio_Pt2.png");
 
         // Print event counts for reference
         System.out.println("Electron counts: Lead = " + count_Pb_e + ", Deuterium = " + count_D_e);
