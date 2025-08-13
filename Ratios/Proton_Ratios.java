@@ -161,10 +161,10 @@ public class Proton_Counts {
         cPt2.getPad().getAxisY().setRange(0, 2);
 
         // --- Save canvases if desired ---
-        cZ.save("/home/reh1/Pictures/Carbon/LiquidD_DIS_ProtonNumVsZ_Ratio_C_D_DISCUT.png");
-        cQ2.save("/home/reh1/Pictures/Carbon/LiquidD_DIS_ProtonNumVsQ2_Ratio_C_D_DISCUT.png");
-        cNu.save("/home/reh1/Pictures/Carbon/LiquidD_DIS_ProtonNumVsNu_Ratio_C_D_DISCUT.png");
-        cPt2.save("/home/reh1/Pictures/Carbon/LiquidD_DIS_ProtonNumVsPt2_Ratio_C_D_DISCUT.png");
+        cZ.save("/home/youruserdirectory/Pictures/Carbon/LiquidD_DIS_ProtonNumVsZ_Ratio_C_D_DISCUT.png");
+        cQ2.save("/home/youruserdirectory/Pictures/Carbon/LiquidD_DIS_ProtonNumVsQ2_Ratio_C_D_DISCUT.png");
+        cNu.save("/home/youruserdirectory/Pictures/Carbon/LiquidD_DIS_ProtonNumVsNu_Ratio_C_D_DISCUT.png");
+        cPt2.save("/home/youruserdirectory/Pictures/Carbon/LiquidD_DIS_ProtonNumVsPt2_Ratio_C_D_DISCUT.png");
 
         System.out.println("Total Carbon protons: " + protonCount_C);
         System.out.println("Total Deuterium protons: " + protonCount_D);
