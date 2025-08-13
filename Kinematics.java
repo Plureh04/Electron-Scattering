@@ -140,7 +140,7 @@ public class Kinematics {
         kinCanvas.cd(4).draw(hXvQ2);      // Draw Bjorken X vs Q^2
         kinCanvas.cd(5).draw(hY);         // Draw y vs Q^2
         kinCanvas.cd(6).draw(hZvQ2);      // Draw Bjorken Z vs Q^2
-        kinCanvas.save("/home/reh1/Pictures/PB/DIS_Kinematics.png"); // Save canvas as PNG
+        kinCanvas.save("/home/youruserdirectory/Pictures/PB/DIS_Kinematics.png"); // Save canvas as PNG
 
         System.out.println("Done processing DIS kinematics.");
 
