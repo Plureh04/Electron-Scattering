@@ -103,11 +103,11 @@ public class PID {
 
         // Draw and save Beta vs Momentum histogram
         ec.draw(BvM);
-        ec.save("/home/reh1/Pictures/BvM_graph.png");
+        ec.save("/home/youruserdirectory/Pictures/BvM_graph.png");
 
         // Draw and save DeltaBeta vs Momentum histogram
         ec2.draw(DBvM);
-        ec2.save("/home/reh1/Pictures/DBvM_graph.png");
+        ec2.save("/home/youruserdirectory/Pictures/DBvM_graph.png");
 
         // Project DeltaBeta vs Momentum histogram onto Y axis (deltaBeta)
         H1F projectionY = DBvM.projectionY();
@@ -119,7 +119,7 @@ public class PID {
         projectionY.setLineColor(2);
         projectionY.setTitleY("Counts");
         canvasProjection.draw(projectionY);
-        projectionY.save("/home/reh1/Pictures/ProjectionY_graph.png");
+        projectionY.save("/home/youruserdirectory/Pictures/ProjectionY_graph.png");
 
         // Fit slices of DeltaBeta vs Momentum histogram to Gaussians
         ParallelSliceFitter fitter = new ParallelSliceFitter(DBvM);
@@ -156,13 +156,13 @@ public class PID {
         TCanvas meanCanvas = new TCanvas("Mean vs Momentum", 600, 600);
         meanCanvas.draw(meanVsMomentum);
         meanCanvas.getPad().getAxisY().setRange(-0.0015, 0.0007); // Set Y-axis range for deltaBeta
-        meanCanvas.save("/home/reh1/Pictures/Gaussian_Mean_vs_Momentum.png");
+        meanCanvas.save("/home/youruserdirectory/Pictures/Gaussian_Mean_vs_Momentum.png");
 
         // Draw and save width vs momentum graph
         TCanvas widthCanvas = new TCanvas("Width(Sigma) vs Momentum", 600, 600);
         widthCanvas.draw(widthVsMomentum);
         widthCanvas.getPad().getAxisY().setRange(-0.025, 0.015); // Set Y-axis range for width
-        widthCanvas.save("/home/reh1/Pictures/Gaussian_Width_vs_Momentum.png");
+        widthCanvas.save("/home/youruserdirectory/Pictures/Gaussian_Width_vs_Momentum.png");
 
         // Print summary statistics
         System.out.println("Total Events Processed: " + eventCount);
