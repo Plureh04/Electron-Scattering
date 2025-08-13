@@ -175,12 +175,12 @@ public class Electron_counts {
         hCountsNu_C.setFillColor(2);
 
         // --- Save canvases as PNG images ---
-        cZ.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsZ_Ratio_C_D_DISCUT.png");
-        cQ2.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsQ2_Ratio_C_D_DISCUT.png");
-        cNu.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsNu_Ratio_C_D_DISCUT.png");
-        cPt2.save("/home/reh1/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsPt2_Ratio_C_D_DISCUT.png");
-        cCountsQ2.save("/home/reh1/Pictures/Carbon/Electron_Count/Counts_vs_Q2.png");
-        cCountsNu.save("/home/reh1/Pictures/Carbon/Electron_Count/Counts_vs_Nu.png");
+        cZ.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsZ_Ratio_C_D_DISCUT.png");
+        cQ2.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsQ2_Ratio_C_D_DISCUT.png");
+        cNu.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsNu_Ratio_C_D_DISCUT.png");
+        cPt2.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/LiquidD_DIS_ElectronNumVsPt2_Ratio_C_D_DISCUT.png");
+        cCountsQ2.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/Counts_vs_Q2.png");
+        cCountsNu.save("/home/youruserdirectory/Pictures/Carbon/Electron_Count/Counts_vs_Nu.png");
 
         // --- Print electron counts for each target ---
         System.out.println("Number of electrons from Deuterium: " + nElectrons_D);
