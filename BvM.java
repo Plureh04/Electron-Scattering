@@ -170,7 +170,7 @@ public class BvM {
             fitter.getInspectFitsPane();
             fitter.inspectFits();
             can.save("/home/youruserdirectory/Pictures/Can_graph.png");
-           // fitter.save("/home/reh1/Pictures/Fitter_graph.png");
+           // fitter.save("/home/userdirectory/Pictures/Fitter_graph.png");
 
 
         }
