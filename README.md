@@ -6,7 +6,6 @@
    - In order to run this code, you will need nfs data installed onto your system. 
    - An IDE is recommended (intellij, VisualStudios, eclipse)
    - Coatjava library will be needed (can extract from the JeffersonLab github)
-   - 
 
 # IDE 
 
