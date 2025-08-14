@@ -28,13 +28,6 @@
    - Select the newest version (2.4) for "graphics2d", "graphicsbase", & "freehep-io-2.2.2.jar"
    - Apply all to the project and it should be implemented properly
 
-# Terminal 
-
-1. Fork or Clone this repo
-   - Make sure coatjava is installed into your system
-   - To fork this repo, head to the front page and click fork
-   - To clone this repo do a "git clone [url]"
-   - 
 # Files
 
 Which files to Run:
