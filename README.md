@@ -35,5 +35,5 @@ Which files to Run:
 1. Download or copy the Carbon.java and PB.java from this repo
 2. To see proton identification, run PID.java
 3. To look at the kinematics, run kinematics.java
-4. To look at the ratios of the proton and electorn, run the files provided in the Ratios file
+4. To look at the ratios of the proton and electron, run the files provided in the Ratios file
 5. To look at the multiplicity ratios, run the provided files inside the mult_ratios file
